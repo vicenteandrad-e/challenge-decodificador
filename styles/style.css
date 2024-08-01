@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --cor-primaria: #F3F5FC;
+    --cor-secundaria: #0A3871;
+    --cor-ternaria: #FFFFFF;
+    --cor-quartenaria: #D8DFE8;
+
+    --cor-texto-primario: #343A40;
+    --cor-texto-secundaria: #495057;
+
+    --fonte-peso-regular: 400;
+    --fonte-peso-bold: 700;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--cor-quartenaria);
+    background-color: #272727;
+    background-color: var(--cor-primaria);
+}
+
+/* Estilizando cabeçalho  */
+
+.cabecalho { /* Passível de mudanças */
+    padding: 40px 0 0 40px;
+}
+
+/* Estilização da secção principal */
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 80px;
+    padding: 0 0 5em;
+}
+
+.principal__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    padding: 128px 0 32px 0;
+    gap: 381px;
+}
+
+#principal__conteudo__areatexto {
+    width: 680px;
+    height: 288px;
+
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    /* background-color: #272727; */
+    background-color: var(--cor-primaria);
+    /* Remove a borda e a sobre-borda do textarea */
+    border: none;
+    resize: none;
+}
+
+#principal__conteudo__areatexto:focus {  
+    outline: none;
+}
+
+#principal__conteudo__areatexto::-webkit-scrollbar {
+    width: 0px; /* 'Remove' scrollbar */
+}
+
+#principal__conteudo__areatexto::placeholder {
+    color: var(--cor-secundaria);
+}
+
+/* Estilizando botões + texto informativo */
+
+.principal__conteudo__informativo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.principal__conteudo__informativo__info {
+    /* Centralizando itens da class(img e p) */
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--cor-texto-secundaria);
+}
+
+/* Centralizando icone de exclamção ao texto */
+.principal__conteudo__informativo__info > img {
+    vertical-align: middle;
+    padding-right: 8px;
+}
+
+.principal__conteudo__informativo__botoes {
+    display: flex;
+    gap: 24px;
+}
+
+.principal__conteudo__informativo__botoes__botaocripto {
+    width: 328px;
+    padding: 24px 0;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quartenaria);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.principal__conteudo__informativo__botoes__botaodescripto {
+    width: 328px;
+    padding: 24px 0;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
+}
+ /* Talvez mudanças */
+.principal__conteudo__informativo__botoes__botaocripto:hover,
+.principal__conteudo__informativo__botoes__botaodescripto:hover 
+{
+    opacity: 0.75;
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+}
+
+/* Estilizar campo criptografado ou descriptografado */
+
+.principal__criptografia {
+    width: 400px;
+    height: 944px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#principal__criptografia__mensagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.principal__criptografia__mensagem__textarea {
+    width: 336px;
+    height: 781px;
+
+    font-size: 1.5rem;
+    font-weight: var(--fonte-peso-regular);
+    color: var(--cor-texto-secundaria);
+
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.principal__conteudo__mensagem__botao {
+    width: 328px;
+    padding: 24px 0;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 24px;
+    background-color: var(--cor-ternaria);
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 400;
+}
+.principal__conteudo__mensagem__botao:hover {
+    opacity: 0.75;
+    transform: scale(1.03);
+    transition-duration: 0.2s;
+}
+
+.principal__criptografia > img {
+    width: 336px;
+    padding: 0px 24px;
+}
+
+.principal__criptografia__setor__textos {
+    width: 336px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+}
+
+.principal__criptografia__setor__textos__destaque {
+    color: var(--cor-texto-primario);
+    font-weight: var(--fonte-peso-bold);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Estilizando footer */
+
+.rodape {
+    background-color: var(--cor-secundaria);
+    font-size: 1.5rem;
+    font-weight: var(--fonte-peso-bold);
+    padding: 24px;
+    text-align: center;
+}
+
+/* Adicionar media querys */

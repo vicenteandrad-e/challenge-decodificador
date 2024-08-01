@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de Texto - Challenge Programa ONE</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/logo-alura-title.png">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img src="./assets/logo-alura.png" alt="Logo da alura">
+    </header>
+    <main class="principal">
+        <section class="principal__conteudo">
+            <textarea id="principal__conteudo__areatexto" placeholder="Digite seu texto" required></textarea>
+            <div class="principal__conteudo__informativo">
+                <p class="principal__conteudo__informativo__info">
+                    <img src="./assets/exclamation-circle.png" alt="Icone de exclamção">
+                    Apenas letras minúsculas e sem acento.
+                </p>
+                <div class="principal__conteudo__informativo__botoes">
+                    <button onclick="btnCriptografar()" class="principal__conteudo__informativo__botoes__botaocripto" type="submit" onclick="criptografarTexto()">Criptografar</button>
+                    <button onclick="btnDescriptografar()" class="principal__conteudo__informativo__botoes__botaodescripto" type="submit" onclick="descriptografarTexto()">Descriptografar</button>
+                </div>
+            </div>
+        </section> 
+        <section class="principal__criptografia">
+            <div id="principal__criptografia__mensagem">
+                <textarea class="principal__criptografia__mensagem__textarea" readonly></textarea>
+                <button onclick="copiarTexto()" class="principal__conteudo__mensagem__botao">Copiar</button>
+            </div>
+            <div id="principal__criptografia__setor">
+                <img src="./assets/sidebar-image.svg" alt="Imagem ilustrativa de pesquisa">
+                <div class="principal__criptografia__setor__textos">
+                    <p class="principal__criptografia__setor__textos__destaque">Nenhuma mensagem encontrada</p>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <p>Desenvolvido por Vicente Andrade</p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
