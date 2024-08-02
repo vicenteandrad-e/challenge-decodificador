@@ -33,10 +33,11 @@ body {
     align-items: center;
     justify-content: center;
     column-gap: 80px;
-    padding: 0 0 5em;
+    padding: 0% 18% 5%;
 }
 
 .principal__conteudo {
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
@@ -129,21 +130,21 @@ body {
 
 /* Estilizar campo criptografado ou descriptografado */
 
-.principal__criptografia {
+.principal__sidebar__setor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 32px;
+    
     width: 400px;
     height: 944px;
     background-color: white;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 32px;
 }
 
-#principal__criptografia__mensagem {
+#principal__sidebar__setor__mensagem {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,7 +152,7 @@ body {
     gap: 32px;
 }
 
-.principal__criptografia__mensagem__textarea {
+.principal__sidebar__setores__mensagem__textarea {
     width: 336px;
     height: 781px;
 
@@ -164,7 +165,7 @@ body {
     resize: none;
 }
 
-.principal__conteudo__mensagem__botao {
+.principal__sidebar__setor__mensagem__botao {
     width: 328px;
     padding: 24px 0;
     border: 1px solid var(--cor-secundaria);
@@ -174,18 +175,18 @@ body {
     font-size: 1rem;
     font-weight: 400;
 }
-.principal__conteudo__mensagem__botao:hover {
+.principal__sidebar__setor__mensagem__botao:hover {
     opacity: 0.75;
     transform: scale(1.03);
     transition-duration: 0.2s;
 }
 
-.principal__criptografia > img {
+.principal__sidebar__setor__sinalizador__imagem {
     width: 336px;
     padding: 0px 24px;
 }
 
-.principal__criptografia__setor__textos {
+.principal__sidebar__setor__sinalizador__textos {
     width: 336px;
     display: flex;
     flex-direction: column;
@@ -193,7 +194,7 @@ body {
     text-align: center;
 }
 
-.principal__criptografia__setor__textos__destaque {
+.principal__sidebar__setor__sinalizador__textos__destaque {
     color: var(--cor-texto-primario);
     font-weight: var(--fonte-peso-bold);
     font-size: 1.5rem;
@@ -211,3 +212,70 @@ body {
 }
 
 /* Adicionar media querys */
+@media(max-width: 1100px) {
+
+    .cabecalho {
+        padding: 4%;
+    }
+
+    .principal {
+        flex-direction: column;
+        padding: 5% 10%;
+    }
+
+    .principal__conteudo {
+        align-self: center;
+        justify-content: center;
+        width: auto;
+    }
+
+    .principal__criptografia__sidebar {
+        width: 688px;
+        height: auto;
+        padding: 2em;
+    }
+
+    .principal__criptografia__mensagem__textarea {
+        width: 600px;
+    }
+
+    .principal__conteudo__mensagem__botao {
+        width: 600px;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .principal {
+        flex-direction: column;
+        padding: 5% 10%;
+    }
+
+    .principal__conteudo {
+        width: auto;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .principal__criptografia__setor__imagem {
+        display: none;
+    }
+
+    .principal__criptografia__sidebar {
+        width: 688px;
+        height: 343px;
+        padding: 2em;
+    }
+
+    .principal__criptografia__mensagem__textarea {
+        height: auto;
+        width: 600px;
+    }
+
+    .principal__conteudo__mensagem__botao {
+        width: 600px;
+    }
+
+}
+

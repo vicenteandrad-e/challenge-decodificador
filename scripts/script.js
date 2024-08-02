@@ -1,11 +1,11 @@
 // Funções Criptografar e Descriptografar
 
 const textArea = document.querySelector("#principal__conteudo__areatexto");
-const mensagem = document.querySelector(".principal__criptografia__mensagem__textarea");
+const mensagem = document.querySelector(".principal__sidebar__setores__mensagem__textarea");
 
 // Mostrando e ocultando elementos dentro do HTML
-document.getElementById("principal__criptografia__mensagem").style.display = 'none';
-document.getElementById("principal__criptografia__setor").style.display = 'initial';
+document.getElementById("principal__sidebar__setor__mensagem").style.display = 'none';
+document.getElementById("principal__sidebar__setor__sinalizador").style.display = 'initial';
 
 // Buscar outra maneira e fazer criptografia
 
@@ -60,13 +60,13 @@ function btnDescriptografar() {
 // Função para trocar de elementos
 
 function trocarElementos() {
-    document.getElementById("principal__criptografia__mensagem").style.display = 'inherit';
-    document.getElementById("principal__criptografia__setor").style.display = 'none'; 
+    document.getElementById("principal__sidebar__setor__mensagem").style.display = 'inherit';
+    document.getElementById("principal__sidebar__setor__sinalizador").style.display = 'none'; 
 }
 
 // Função para copiar
 async function copiarTexto() {
-    const textoArea = document.querySelector(".principal__criptografia__mensagem__textarea");
+    const textoArea = document.querySelector(".principal__sidebar__setores__mensagem__textarea");
     try {
         await navigator.clipboard.writeText(textoArea.value);
         mudarTextoBotao();
@@ -79,9 +79,9 @@ async function copiarTexto() {
 // Mudar e resetar valor o botão copiar
 
 function mudarTextoBotao() {
-    document.querySelector(".principal__conteudo__mensagem__botao").innerHTML = "Texto Copiado!";
+    document.querySelector(".principal__sidebar__setor__mensagem__botao").innerHTML = "Texto Copiado!";
 }
 
 function resetarTextoBotao() {
-    document.querySelector(".principal__conteudo__mensagem__botao").innerHTML = "Copiar";
+    document.querySelector(".principal__sidebar__setor__mensagem__botao").innerHTML = "Copiar";
 }
