@@ -15,7 +15,7 @@
     --fonte-peso-bold: 700;
 }
 
-html, body {
+body {
     height: 100vh;
     font-family: "Inter", sans-serif;
     font-weight: 400;
@@ -30,26 +30,28 @@ html, body {
 
 .principal__flex {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
 }
 
 /* Estilizando cabeçalho  */
 
 .cabecalho { /* Passível de mudanças */
-    padding: 40px 0 0 40px;
+    padding: 40px;
 }
 
 /* Estilização principal__conteudo */
 
-.principal__conteudo {
-    padding: 10.5rem 0;
+.principal {
+    padding: 2.5rem 15%;
+}
+
+.principal .principal__flex {
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
 }
 
 .principal__conteudo textarea {
-    width: 100%;
-    max-width: 42.5rem;
+    min-width: 42.5rem;
     min-height: 38.25rem;
     font-size: 2rem;
     color: var(--cor-secundaria);
@@ -102,7 +104,7 @@ html, body {
 }
 
 .principal__botoes .principal__botoes__botao{
-    width: 328px;
+    min-width: 328px;
     padding: 24px 0;
     border: none;
     border-radius: 24px;
@@ -129,11 +131,8 @@ html, body {
 
 /* Estilizar campo criptografado ou descriptografado */
 
-.principal__sidebar {
-    padding: 2.5rem 4%;
-}
-
 .principal__sidebar .principal__card {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,7 +169,7 @@ html, body {
 }
 
 #principal__mensagem button {
-    width: 328px;
+    max-width: 328px;
     padding: 24px 0;
     border: 1px solid var(--cor-secundaria);
     border-radius: 24px;
@@ -211,7 +210,8 @@ html, body {
 
 /* Estilizando footer */
 
-.rodape {
+.principal__rodape {
+    width: 100%;
     background-color: var(--cor-secundaria);
     font-size: 1.5rem;
     font-weight: var(--fonte-peso-bold);
