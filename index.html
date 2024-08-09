@@ -11,42 +11,63 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <img src="./assets/logo-alura.png" alt="Logo da alura">
-    </header>
-    <main class="principal">
-        <section class="principal__conteudo">
-            <textarea id="principal__conteudo__areatexto" placeholder="Digite seu texto" required></textarea>
-            <div class="principal__conteudo__informativo">
-                <p class="principal__conteudo__informativo__info">
-                    <img src="./assets/exclamation-circle.png" alt="Icone de exclamção">
-                    Apenas letras minúsculas e sem acento.
-                </p>
-                <div class="principal__conteudo__informativo__botoes">
-                    <button onclick="btnCriptografar()" class="principal__conteudo__informativo__botoes__botaocripto" type="submit" onclick="criptografarTexto()">Criptografar</button>
-                    <button onclick="btnDescriptografar()" class="principal__conteudo__informativo__botoes__botaodescripto" type="submit" onclick="descriptografarTexto()">Descriptografar</button>
-                </div>
+    <!-- <header>
+        <div class="principal__interface">
+            <div class="principal__cabecalho">
+                <img src="./assets/logo-alura.png" alt="Logo da alura">
             </div>
-        </section> 
-        <section class="principal__sidebar">
-            <div class="principal__sidebar__setor">
-                <div id="principal__sidebar__setor__mensagem">
-                    <textarea class="principal__sidebar__setores__mensagem__textarea" readonly></textarea>
-                    <button onclick="copiarTexto()" class="principal__sidebar__setor__mensagem__botao">Copiar</button>
-                </div>
-                <div id="principal__sidebar__setor__sinalizador">
-                    <img class="principal__sidebar__setor__sinalizador__imagem" src="./assets/sidebar-image.svg" alt="Imagem ilustrativa de pesquisa">
-                    <div class="principal__sidebar__setor__sinalizador__textos">
-                        <p class="principal__sidebar__setor__sinalizador__textos__destaque">Nenhuma mensagem encontrada</p>
-                        <p>Digite um texto que você deseja criptografar ou descriptografar</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </header> -->
+    <main>
+        <section class="principal">
+            <div class="principal__interface">
+                <div class="principal__flex">
+                    <div class="principal__conteudo">
+                        <textarea id="principal__conteudo__areatexto" placeholder="Digite seu texto" required></textarea>
+                        <div class="principal__informacao">
+                            <p class="principal__informacao__infomativo">
+                                <img src="./assets/exclamation-circle.png" alt="Icone de exclamação">
+                                Apenas letras minúsculas e sem acento.
+                            </p> <!--principal__informacao__informativo-->
+
+                            <div class="principal__botoes">
+                                <button onclick="btnCriptografar()" class="principal__botoes__botao" type="submit" onclick="criptografarTexto()">Criptografar</button>
+                                <button onclick="btnDescriptografar()" class="principal__botoes__botao principal__botoes__botao--gray" type="submit" onclick="descriptografarTexto()">Descriptografar</button>
+                            </div> <!--principal__botoes-->
+
+                        </div> <!--principal__informacao-->
+
+                    </div> <!--principal__conteudo-->
+
+                    <div class="principal__sidebar">
+                        <div id="principal__mensagem">
+                            <textarea class="principal__mensagem__textarea" readonly></textarea>
+                            <button onclick="copiarTexto()" class="principal__mensagem__botao">Copiar</button>
+                        </div> <!--principal__mensagem-->
+
+                        <div id="principal__sinalizacao">
+                            <img class="principal__sinalizacao__imagem" src="./assets/sidebar-image.svg" alt="Imagem ilustrativa de pesquisa">
+                            <div class="principal__textos">
+                                <p class="principal__textos__destaque">Nenhuma mensagem encontrada</p>
+                                <p>Digite um texto que você deseja criptografar ou descriptografar</p>
+                            </div> 
+                        </div> <!-- principal__sinalizacao -->
+
+                    </div> <!--principal___sidebar-->
+
+                </div> <!--principal__flex-->
+
+            </div> <!--principal__interface-->
+
+        </section> <!--principal-->
     </main>
-    <footer class="rodape">
-        <p>Desenvolvido por Vicente Andrade</p>
-    </footer>
-    <script src="./scripts/script.js"></script>
+    <!-- <footer>
+        <div class="principal__interface">
+            <div class="principal__rodape">
+                <p>Desenvolvido por Vicente Andrade</p>
+            </div>
+        </div>
+    </footer> -->
+    <!-- <script src="./scripts/script.js"></script> -->
 </body>
 </html>
