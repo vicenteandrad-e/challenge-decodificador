@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+/* Estilização Geral */
+
 :root {
     --cor-primaria: #F3F5FC;
     --cor-secundaria: #0A3871;
@@ -13,11 +15,24 @@
     --fonte-peso-bold: 700;
 }
 
-body {
+html, body {
+    height: 100vh;
     font-family: "Inter", sans-serif;
+    font-weight: 400;
     color: var(--cor-quartenaria);
-    background-color: #272727;
     background-color: var(--cor-primaria);
+}
+
+.principal__interface {
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.principal__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
 }
 
 /* Estilizando cabeçalho  */
@@ -26,106 +41,89 @@ body {
     padding: 40px 0 0 40px;
 }
 
-/* Estilização da secção principal */
-
-.principal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 80px;
-    padding: 0% 18% 5%;
-}
+/* Estilização principal__conteudo */
 
 .principal__conteudo {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    padding: 128px 0 32px 0;
-    gap: 381px;
+    padding: 10.5rem 4%;
 }
 
-#principal__conteudo__areatexto {
-    width: 680px;
-    height: 288px;
-
+.principal__conteudo textarea {
+    width: 42.5rem;
+    min-height: 31.25rem;
     font-size: 2rem;
     color: var(--cor-secundaria);
-    /* background-color: #272727; */
     background-color: var(--cor-primaria);
     /* Remove a borda e a sobre-borda do textarea */
     border: none;
     resize: none;
 }
 
-#principal__conteudo__areatexto:focus {  
-    outline: none;
+.principal__conteudo textarea:focus { /* Desativado depois */
+    /* outline: none; */
 }
 
-#principal__conteudo__areatexto::-webkit-scrollbar {
-    width: 0px; /* 'Remove' scrollbar */
-}
-
-#principal__conteudo__areatexto::placeholder {
+.principal__conteudo textarea::placeholder {
     color: var(--cor-secundaria);
 }
 
-/* Estilizando botões + texto informativo */
+.principal__conteudo textarea::-webkit-scrollbar {
+    width: 0px; /* 'Remove' scrollbar */
+}
 
-.principal__conteudo__informativo {
+
+/* Estilizando principal__informacao */
+
+.principal__conteudo .principal__informacao { /* Passível de melhora */
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.principal__conteudo__informativo__info {
+.principal__conteudo .principal__informacao p {
     /* Centralizando itens da class(img e p) */
     display: inline-flex;
     align-items: center;
-    font-size: 0.8rem;
-    font-weight: 400;
+    font-size: .8rem;
     color: var(--cor-texto-secundaria);
 }
 
-/* Centralizando icone de exclamção ao texto */
-.principal__conteudo__informativo__info > img {
+.principal__conteudo .principal__informacao img {
+    /* Centralizando icone de exclamação ao texto */
     vertical-align: middle;
     padding-right: 8px;
 }
 
-.principal__conteudo__informativo__botoes {
+/* Estilizando principal__botoes */
+
+.principal__botoes {
     display: flex;
-    gap: 24px;
+    gap: 24px
 }
 
-.principal__conteudo__informativo__botoes__botaocripto {
+.principal__botoes .principal__botoes__botao{
     width: 328px;
     padding: 24px 0;
     border: none;
     border-radius: 24px;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-quartenaria);
     font-size: 1rem;
     font-weight: 400;
+
+    &[class*="--darkblue"] {
+        background-color: var(--cor-secundaria);
+        color: var(--cor-quartenaria);
+    }
+
+    &[class*="--gray"] {
+        border: 1px solid var(--cor-secundaria);
+        background-color: var(--cor-primaria);
+        color: var(--cor-secundaria);
+    }
 }
 
-.principal__conteudo__informativo__botoes__botaodescripto {
-    width: 328px;
-    padding: 24px 0;
-    border: 1px solid var(--cor-secundaria);
-    border-radius: 24px;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-    font-size: 1rem;
-    font-weight: 400;
-}
- /* Talvez mudanças */
-.principal__conteudo__informativo__botoes__botaocripto:hover,
-.principal__conteudo__informativo__botoes__botaodescripto:hover 
-{
-    opacity: 0.75;
+.principal__botoes .principal__botoes__botao:hover {
+    opacity: 0.8;
     transform: scale(1.03);
-    transition-duration: 0.2s;
+    transition-duration: .2s;
 }
 
 /* Estilizar campo criptografado ou descriptografado */
@@ -209,73 +207,5 @@ body {
     font-weight: var(--fonte-peso-bold);
     padding: 24px;
     text-align: center;
-}
-
-/* Adicionar media querys */
-@media(max-width: 1100px) {
-
-    .cabecalho {
-        padding: 4%;
-    }
-
-    .principal {
-        flex-direction: column;
-        padding: 5% 10%;
-    }
-
-    .principal__conteudo {
-        align-self: center;
-        justify-content: center;
-        width: auto;
-    }
-
-    .principal__criptografia__sidebar {
-        width: 688px;
-        height: auto;
-        padding: 2em;
-    }
-
-    .principal__criptografia__mensagem__textarea {
-        width: 600px;
-    }
-
-    .principal__conteudo__mensagem__botao {
-        width: 600px;
-    }
-
-}
-
-@media(max-width: 768px){
-
-    .principal {
-        flex-direction: column;
-        padding: 5% 10%;
-    }
-
-    .principal__conteudo {
-        width: auto;
-        align-self: center;
-        justify-content: center;
-    }
-
-    .principal__criptografia__setor__imagem {
-        display: none;
-    }
-
-    .principal__criptografia__sidebar {
-        width: 688px;
-        height: 343px;
-        padding: 2em;
-    }
-
-    .principal__criptografia__mensagem__textarea {
-        height: auto;
-        width: 600px;
-    }
-
-    .principal__conteudo__mensagem__botao {
-        width: 600px;
-    }
-
 }
 
