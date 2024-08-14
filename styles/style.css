@@ -36,12 +36,19 @@ body {
 
 .cabecalho { /* Passível de mudanças */
     padding: 40px;
+    position: relative;
+    right:  40px;
 }
 
 /* Estilização principal__conteudo */
 
 .principal {
-    padding: 2.5rem 15%;
+    padding: 2.5rem 4%;
+}
+
+.principal__conteudo {
+    width: 100%;
+    max-width: 42.5rem;
 }
 
 .principal .principal__flex {
@@ -51,8 +58,8 @@ body {
 }
 
 .principal__conteudo textarea {
-    min-width: 42.5rem;
-    min-height: 38.25rem;
+    width: 100%;
+    height: 38.25rem;
     font-size: 2rem;
     color: var(--cor-secundaria);
     background-color: var(--cor-primaria);
@@ -104,7 +111,7 @@ body {
 }
 
 .principal__botoes .principal__botoes__botao{
-    min-width: 328px;
+    width: 100%;
     padding: 24px 0;
     border: none;
     border-radius: 24px;
@@ -131,6 +138,11 @@ body {
 
 /* Estilizar campo criptografado ou descriptografado */
 
+.principal__sidebar {
+    width: 100%;
+    max-width: 25rem;
+}
+
 .principal__sidebar .principal__card {
     position: relative;
     display: flex;
@@ -140,8 +152,7 @@ body {
     gap: 32px;
 
     width: 100%;
-    min-width: 400px;
-    min-height: 944px;
+    height: 944px;
     background-color: white;
     border-radius: 32px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); 
@@ -156,8 +167,10 @@ body {
 }
 
 #principal__mensagem textarea {
-    width: 336px;
+    width: 100%;
+    max-width: 336px;
     height: 781px;
+    padding: 4%;
 
     font-size: 1.5rem;
     font-weight: var(--fonte-peso-regular);
@@ -169,6 +182,7 @@ body {
 }
 
 #principal__mensagem button {
+    width: 100%;
     max-width: 328px;
     padding: 24px 0;
     border: 1px solid var(--cor-secundaria);
@@ -188,12 +202,14 @@ body {
 /* Estilização principal__sinalizacao */
 
 #principal__sinalizacao img {
-    width: 336px;
+    width: 100%;
+    max-width: 336px;
     padding: 0px 24px;
 }
 
 #principal__sinalizacao .principal__textos {
-    width: 336px;
+    width: 100%;
+    max-width: 336px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -217,5 +233,67 @@ body {
     font-weight: var(--fonte-peso-bold);
     padding: 24px;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .principal {
+        padding: 40px 6%;
+    }
+
+    .principal__flex {
+        flex-direction: column;
+    }
+
+    .principal__sidebar {
+        max-width: 43rem;
+    }
+    
+    .principal__sidebar .principal__card {
+        height: auto;
+    }
+    
+    #principal__mensagem {
+        padding: 3%;
+        width: 100%;
+    }
+    
+    #principal__mensagem textarea{
+        height: 80%;
+        min-height: 17rem;
+    }
+    
+    #principal__mensagem textarea,
+    #principal__mensagem button {
+        max-width: 43rem;
+    }
+
+    #principal__sinalizacao {
+        padding: 8%;
+    } 
+    
+    #principal__sinalizacao img {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 320px) {
+
+    .cabecalho {
+        right: 60px
+    }
+
+    .principal__conteudo textarea {
+        height: 19.125rem;
+    }
+
+    .principal__botoes {
+        flex-direction: column;
+    }
+
+    #principal__mensagem {
+        padding: 8%;
+    }
 }
 
