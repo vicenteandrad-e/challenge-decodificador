@@ -4,7 +4,7 @@
 
 # PROJETO
 <p align = "center" >
-    <img width="600" height="800" src="assets/to_readme/Animação.gif">
+    <img width="800" height="720" src="assets/to_readme/Animação.gif">
 </p>
 
 
