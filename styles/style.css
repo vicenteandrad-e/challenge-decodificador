@@ -15,6 +15,13 @@
     --fonte-peso-bold: 700;
 }
 
+.darkmode {
+    --cor-primaria: #04042e;
+    --cor-secundaria: #1215f1a6;
+    --cor-ternaria: #ececf8;
+    --cor-quartenaria: #fcfcfc;
+}
+
 body {
     height: 100vh;
     font-family: "Inter", sans-serif;
@@ -32,12 +39,44 @@ body {
     display: flex;
 }
 
+/* DARKMODE */
+
+.darkmode #btn-darkmode svg:first-child {
+    display: none;
+}
+
+.darkmode #btn-darkmode svg:last-child {
+    display: block;
+}
+
 /* Estilizando cabeçalho  */
 
 .cabecalho { /* Passível de mudanças */
     padding: 40px;
     position: relative;
     right:  40px;
+}
+
+.cabecalho #btn-darkmode {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+}
+
+#btn-darkmode svg {
+    fill: var(--cor-secundaria);
+}
+
+#btn-darkmode svg:last-child {
+    display: none;
 }
 
 /* Estilização principal__conteudo */
@@ -125,7 +164,7 @@ body {
 
     &[class*="--gray"] {
         border: 1px solid var(--cor-secundaria);
-        background-color: var(--cor-primaria);
+        background-color: var(--cor-quartenaria);
         color: var(--cor-secundaria);
     }
 }
@@ -236,6 +275,10 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+
+    .cabecalho {
+        
+    }
 
     .principal {
         padding: 40px 6%;
