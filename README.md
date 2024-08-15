@@ -9,7 +9,7 @@
 Objetivo desse projeto é a criptografia de textos, onde poderá ser feita troar de mensagens secretas entre pessoas.
 
 <p align = "center" >
-    <img width="1920" height="1080" src="assets/to_readme/Animação.gif">
+    <img width="640" height="500" src="assets/to_readme/Animação.gif">
 </p>
 
 # Funcionalidades do projeto
