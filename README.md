@@ -17,6 +17,7 @@ Objetivo desse projeto é a criptografia de textos, onde poderá ser feita troar
 O projeto DECODIFICADOR conta com 3 botões e 2 areas de textos. Inicialmente será visível apenas 1 área de texto e 2 botões com duas funcionalidades: 
 - `Criptografar`: Criptografa o texto inserido na área de texto.
 - `Descriptografar`: Descriptografa o texto inserido na área de texto.
+
 Após o texto ser *criptografado*, uma nova área de texto será adicionado, onde **irá conter o texto criptografado**, juntamente a um novo botão com outra funcionalidade:
 - `Copiar`: Irá copiar o texto da área adicionada.
 
