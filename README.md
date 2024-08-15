@@ -21,6 +21,17 @@ O projeto DECODIFICADOR conta com 3 botões e 2 areas de textos. Inicialmente se
 Após o texto ser *criptografado*, uma nova área de texto será adicionado, onde **irá conter o texto criptografado**, juntamente a um novo botão com outra funcionalidade:
 - `Copiar`: Irá copiar o texto da área adicionada.
 
+## Funcionalidade adicional
+
+- `Botão DARKMODE`: Muda as cores da página, para um aspecto **darkmode**.
+
+# Principais desafios encontrado no projeto:
+
+- Responsividade.
+- Integração da funcionalidade `copiar`, `criptografar`, `descriptografar`.
+- Integração da funcionalidade `Darkmode`.
+- Box-content(CSS).
+
 # Tecnologias utilizadas
 
 ![html](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
