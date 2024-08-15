@@ -119,7 +119,6 @@ body {
     width: 0px; /* 'Remove' scrollbar */
 }
 
-
 /* Estilizando principal__informacao */
 
 .principal__conteudo .principal__informacao { /* Passível de melhora */
@@ -275,10 +274,6 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-
-    .cabecalho {
-        
-    }
 
     .principal {
         padding: 40px 6%;
